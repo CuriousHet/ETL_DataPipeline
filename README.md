@@ -1,6 +1,5 @@
 # ETL Data Pipeline with DBT, Snowflake, and Airflow
 
-
 This project integrates DBT (Data Build Tool), Snowflake, and Airflow to automate and streamline ETL (Extract, Transform, Load) workflows. DBT is used for data transformation, Snowflake acts as the central data warehouse, and Airflow orchestrates the entire pipeline. The project leverages Astronomer Cosmos to deploy DBT models within Airflow.
 
 ## Setup Instructions
@@ -58,7 +57,7 @@ This project integrates DBT (Data Build Tool), Snowflake, and Airflow to automat
 
 1. **Install Astronomer Cosmos:**
     ```bash
-    pip install Astro
+    pip install astro
     ```
 
 2. **Initialize Airflow Project:**
@@ -95,9 +94,22 @@ This project integrates DBT (Data Build Tool), Snowflake, and Airflow to automat
     - Open your browser and go to `localhost:8080`.
     - Use the default credentials (Username: `admin`, Password: `admin`).
 
-8. **Add Airflow Connection:**
+8. **Add Airflow Connection for Snowflake:**
     - Go to `Admin > Connections` in the Airflow UI.
-    - Add the necessary connection details for Snowflake.
+    - Add a new connection for Snowflake.
+
+    ![Adding Snowflake Connection in Airflow](assets/add-snowflake-cred.png)
 
 9. **Run DBT DAG from Airflow:**
     - Trigger the `dbt_dag` from the Airflow UI to execute your DBT models.
+
+    ![Airflow DBT-DAG Graph](assets/airflow-graph.png)
+
+10. **View Airflow Containers in Docker Desktop:**
+    - Open Docker Desktop to view the running Airflow containers.
+
+    ![Airflow Containers in Docker Desktop](assets/airflow-containers-in-docker.png)
+
+## Conclusion
+
+This setup provides a powerful and automated ETL pipeline that integrates DBT for data transformations, Snowflake for data warehousing, and Airflow for workflow orchestration. By leveraging Astronomer Cosmos, DBT models are seamlessly deployed within Airflow, enabling efficient data processing and analytics.
