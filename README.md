@@ -58,7 +58,7 @@ This project integrates DBT (Data Build Tool), Snowflake, and Airflow to automat
 
 1. **Install Astronomer Cosmos:**
     ```bash
-    pip install Astro
+    pip install astro
     ```
 
 2. **Initialize Airflow Project:**
